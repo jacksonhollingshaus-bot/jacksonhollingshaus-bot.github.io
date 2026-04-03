@@ -1,0 +1,239 @@
+/* scratch.css — Jackson Hollingshaus, IS 201 */
+
+/* 1. Body with Utah mountains background */
+body {
+    font-family: Georgia, serif;
+    background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Navigation bar */
+div#navbar {
+    background-color: #1a3a5c;
+    padding: 12px 24px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+div#navbar a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+div#navbar a:hover {
+    text-decoration: underline;
+}
+
+div#navbar .brand {
+    font-weight: bold;
+    margin-right: auto;
+    font-family: Arial, sans-serif;
+}
+
+/* 3. Page header */
+div#page-header {
+    background-color: rgba(26, 58, 92, 0.85);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+div#page-header h1 {
+    font-size: 36px;
+    margin: 0 0 8px 0;
+}
+
+div#page-header p {
+    font-size: 16px;
+    margin: 0;
+    color: #cce0f5;
+}
+
+/* 4. Main content wrapper */
+div#main-wrapper {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* 5. Content boxes (white cards over the mountain background) */
+div.box {
+    background-color: rgba(255, 255, 255, 0.93);
+    border-radius: 8px;
+    padding: 28px 32px;
+    margin-bottom: 28px;
+    border: 1px solid #ccc;
+}
+
+div.box h2 {
+    color: #1a3a5c;
+    font-size: 22px;
+    border-bottom: 2px solid #1a3a5c;
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+    font-family: Arial, sans-serif;
+}
+
+div.box p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* 6. Sidebar box */
+div#sidebar-box {
+    background-color: rgba(26, 58, 92, 0.88);
+    border-radius: 8px;
+    padding: 20px;
+    color: white;
+    margin-bottom: 28px;
+}
+
+div#sidebar-box h3 {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 6px;
+}
+
+div#sidebar-box a {
+    display: block;
+    color: #cce0f5;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+div#sidebar-box a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* 7. Two-column layout */
+div#two-col {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+div#col-main { flex: 1; }
+
+div#col-side {
+    width: 220px;
+    flex-shrink: 0;
+}
+
+/* 8. Lists */
+ol.main-list {
+    color: #333;
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+ol.main-list li {
+    margin-bottom: 10px;
+}
+
+ul.sub-list {
+    color: #555;
+    padding-left: 18px;
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+ul.sub-list li {
+    margin-bottom: 4px;
+}
+
+/* 9. Images */
+img.page-img {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+/* 10. Video embed container */
+div.video-box {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin: 12px 0;
+}
+
+div.video-box iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+}
+
+/* 11. Button link */
+a.page-btn {
+    display: inline-block;
+    background-color: #1a3a5c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+a.page-btn:hover {
+    background-color: #2e6da4;
+}
+
+/* 12. Footer */
+div#page-footer {
+    background-color: #1a3a5c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+div#page-footer a {
+    color: #cce0f5;
+    text-decoration: none;
+}
+
+/* 13. Font color helpers */
+.text-blue  { color: #1a3a5c; }
+.text-light { color: #cce0f5; }
+
+/* 14. Anchor highlight */
+section:target {
+    outline: 3px solid #2e6da4;
+    border-radius: 8px;
+}
+
+/* 15. Clearfix */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    div#two-col { flex-direction: column; }
+    div#col-side { width: 100%; }
+}
